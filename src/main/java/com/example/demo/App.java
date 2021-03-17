@@ -93,9 +93,11 @@ public class App {
         method1.setAccessible(true);
         Object object1=method1.invoke(user3,"zzz");
         System.out.println(object1);
-
+        //通过反射获取Class对象
         Class clazz=Class.forName(getName("className"));
+        //获取print方法
         Method method2=clazz.getMethod(getName("methodName"));
+        //调用print方法
         method2.invoke(user3);
 
     }
